@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'screens/patient_records_screen.dart';
+import 'package:visionai/config/env.dart';
 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Supabase.initialize(
-    url: 'https://vackbpaebrwtgcadsqlc.supabase.co',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZhY2ticGFlYnJ3dGdjYWRzcWxjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcxMDkxNDQsImV4cCI6MjA2MjY4NTE0NH0.seoFvHpf-qy4bedoI6A2I2Fp7OOUZI8jGe_ZV4G_2hw',
+    url: Env.supabaseUrl,
+    anonKey: Env.supabaseKey,
   );
   runApp(const MyApp());
 }
