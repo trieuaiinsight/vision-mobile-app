@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'screens/patient_records_screen.dart';
+import 'package:visionai/screens/patient_list_screen.dart';
+// import 'screens/patient_records_screen.dart';
 import 'package:visionai/config/env.dart';
 
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'AI Vision',
       theme: ThemeData(primarySwatch: Colors.teal),
-      home: const PatientRecordsScreen(),
+      home: const PatientListScreen(),
     );
   }
 }
